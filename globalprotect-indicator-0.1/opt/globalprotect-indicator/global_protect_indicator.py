@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import os
+import sys
 import signal
 import gi
 import subprocess
@@ -155,6 +156,7 @@ class Indicator():
 
     def stop(self, source):
         Gtk.main_quit()
+        sys.exit(0)
 
     def show_settings(self, source):
         win = GlobalProtectSettings()
