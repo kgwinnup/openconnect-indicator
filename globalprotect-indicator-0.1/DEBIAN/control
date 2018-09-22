@@ -1,0 +1,7 @@
+Package: GlobalProtectApplet
+Version: 0.1
+Section: base
+Maintainer: Kyle Gwinnup
+Architecture: all
+Depends: gir1.2-gtk-3.0, gir1.2-appindicator3-0.1
+Description: indicator applet for global protect 'openconnect' vpn client
