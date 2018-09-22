@@ -1,3 +1,4 @@
 #!/bin/sh
 
 chmod +x /opt/globalprotect-indicator/global_protect_indicator.py
+pip install keyring

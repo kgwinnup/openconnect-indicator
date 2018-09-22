@@ -35,6 +35,7 @@ class GlobalProtectSettings():
         self.builder = Gtk.Builder()
         self.builder.add_from_file("/opt/globalprotect-indicator/settings.xml")
         self.window = self.builder.get_object("MainWindow")
+        self.window.set_icon_from_file("/opt/globalprotect-indicator/gp_on.png")
         self.builder.connect_signals(self)
 
         self.host = self.builder.get_object("entry_host")
