@@ -59,6 +59,8 @@ class GlobalProtectSettings():
     
 class Indicator():
     def __init__(self):
+
+        
         self.app = 'GlobalProtect'
         iconpath = "/opt/globalprotect-indicator/gp_off.png"
         self.connected = False
@@ -172,11 +174,10 @@ def run_settings():
     settings.window.connect("destroy", Gtk.main_quit)
     Gtk.main()
 
-def test_connect():
-    i = Indicator()
-    i.connect()
-
 if __name__ == '__main__':
-    #run_settings()
-    #test_connect()
+    ps = list(filter(lambda x: __file__ in x, subprocess.check_output(['ps', 'aux']).decode('utf-8').split('\n')))
+    if len(ps) > 1:
+        sys.exit(0)
+    
     run_indicator()
+

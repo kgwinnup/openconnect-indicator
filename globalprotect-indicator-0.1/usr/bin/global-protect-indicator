@@ -1,0 +1,3 @@
+#!/bin/sh
+
+nohup /opt/globalprotect-indicator/global_protect_indicator.py > /dev/null 2>&1 &
