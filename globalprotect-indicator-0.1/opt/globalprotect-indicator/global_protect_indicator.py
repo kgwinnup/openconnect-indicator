@@ -25,7 +25,6 @@ class GlobalProtectSettings():
         self.host = self.builder.get_object("entry_host").get_text()
         self.username = self.builder.get_object("entry_username").get_text()
         self.password = self.builder.get_object("entry_password").get_text()
-        print(self.host, self.username, self.password)
         keyring.get_keyring()
         keyring.set_password("gp", "host", self.host)
         keyring.set_password("gp", "username", self.username)
@@ -59,15 +58,12 @@ class GlobalProtectSettings():
     
 class Indicator():
     def __init__(self):
-
-        
         self.app = 'GlobalProtect'
         iconpath = "/opt/globalprotect-indicator/gp_off.png"
         self.connected = False
         self.proc = None
         self.indicator = AppIndicator.Indicator.new(self.app, iconpath, AppIndicator.IndicatorCategory.OTHER)
         self.indicator.set_status(AppIndicator.IndicatorStatus.ACTIVE)
-
         self.indicator.set_menu(self.create_menu())
 
     def create_menu(self):
