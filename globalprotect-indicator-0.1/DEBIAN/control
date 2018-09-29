@@ -3,5 +3,5 @@ Version: 0.1
 Section: base
 Maintainer: Kyle Gwinnup
 Architecture: all
-Depends: gir1.2-gtk-3.0, gir1.2-appindicator3-0.1
+Depends: gir1.2-gtk-3.0, gir1.2-appindicator3-0.1, python-pip, python-appindicator, libgtk-3-0
 Description: indicator applet for global protect 'openconnect' vpn client

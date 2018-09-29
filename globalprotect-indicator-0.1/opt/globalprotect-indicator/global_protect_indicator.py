@@ -49,6 +49,12 @@ class GlobalProtectSettings():
         if not password:
             password = ''
 
+        if not username:
+            username = ''
+
+        if not host:
+            host = ''
+
         self.host.set_text(host)
         self.username.set_text(username)
         self.password.set_text(password)
